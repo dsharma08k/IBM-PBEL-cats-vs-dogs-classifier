@@ -85,7 +85,7 @@ Upload, paste, or link an image — get real-time predictions with confidence sc
 ### 🧪 Instructions
 
 ```bash
-git clone https://github.com/your-username/cats-vs-dogs-classifier
-cd cats-vs-dogs-classifier
+git clone https://github.com/dsharma08k/IBM-PBEL-cats-vs-dogs-classifier
+cd IBM-PBEL-cats-vs-dogs-classifier
 pip install -r requirements.txt
 streamlit run app.py
