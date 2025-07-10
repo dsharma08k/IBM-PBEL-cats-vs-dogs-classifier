@@ -1,40 +1,37 @@
 # 🐱 Cats vs Dogs Image Classifier 🐶
 
-A deep learning project that classifies images as **cats** or **dogs** using a **Convolutional Neural Network (CNN)** built with **Keras**. The model is trained in a Jupyter notebook and deployed as a web app using **Streamlit** on **Hugging Face Spaces**.
+This project classifies images of **cats** and **dogs** using a **Convolutional Neural Network (CNN)** built with **Keras**. The model is trained in a Jupyter notebook and deployed as a Streamlit web app on **Hugging Face Spaces**.
 
 ---
 
 ## 🚀 Live Demo
 
-👉 [**Click here to try the app**](https://huggingface.co/spaces/dsharma08k/cats-vs-dogs-classifier)  
-Upload, paste, or link an image and get instant predictions!
+👉 [**Click here to try the app**](https://huggingface.co/spaces/dsharma08k/cats-vs-dogs-classifier)
+
+Upload, paste, or link an image — get real-time predictions with confidence scores.
 
 ---
 
-## 📁 Files in This Repository
+## 🗂 Files in This Repository
 
 | File | Description |
 |------|-------------|
-| `Cats_vs_Dogs_Classification.ipynb` | Jupyter notebook for training the CNN model |
-| `app.py` | Streamlit app script used for deployment |
-| `requirements.txt` | Python dependencies for the app |
-| `README.md` | Project overview and usage instructions |
+| `Cats_vs_Dogs_Classification.ipynb` | Jupyter Notebook for training the CNN model |
+| `app.py` | Streamlit deployment script (runs the web app) |
+| `requirements.txt` | Python dependencies needed for deployment |
+| `README.md` | Overview of the project |
 
-> 🔒 Note: The trained model file (`best_model.keras`) is **not uploaded here** to save space. It is hosted within the Hugging Face Space.
+> 🔒 Note: The trained model file (`best_model.keras`) is **not included** in this repo. It is hosted within the Hugging Face Space.
 
 ---
 
 ## 🧠 Model Overview
 
-- **Model Type:** Convolutional Neural Network (CNN)
-- **Framework:** TensorFlow / Keras
-- **Input Shape:** 256 x 256 x 3
-- **Layers:**
-  - Multiple `Conv2D + MaxPooling2D` layers
-  - Flatten + Dense layers
-  - Sigmoid output for binary classification
-- **Loss Function:** Binary Crossentropy
-- **Optimizer:** Adam
+- **Architecture**: CNN with Conv2D + MaxPooling layers, followed by Dense layers
+- **Input Shape**: 256x256x3
+- **Output**: Sigmoid activation for binary classification
+- **Optimizer**: Adam
+- **Loss Function**: Binary Crossentropy
 
 ---
 
@@ -42,30 +39,30 @@ Upload, paste, or link an image and get instant predictions!
 
 | Metric        | Score        |
 |---------------|--------------|
-| **Validation Accuracy** | ~85% |
-| **Precision (macro)**   | 85%  |
-| **Recall (macro)**      | 84%  |
-| **F1 Score (macro)**    | 84%  |
-| **Confusion Matrix**    | Included in the notebook |
+| Validation Accuracy | ~85% |
+| Precision (macro)   | 85%  |
+| Recall (macro)      | 84%  |
+| F1 Score (macro)    | 84%  |
+| Confusion Matrix    | Included in the notebook |
 
 ---
 
 ## 🧪 Dataset
 
-- **Name:** Dogs vs Cats
-- **Source:** [Kaggle: Dogs vs Cats](https://www.kaggle.com/c/dogs-vs-cats/data)
-- **Classes:** Binary — 0 = Cat, 1 = Dog
-- **Used Images:** Subsampled ~25,000 images
+- **Name**: Dogs vs Cats
+- **Source**: [Kaggle: Dogs vs Cats](https://www.kaggle.com/datasets/salader/dogs-vs-cats)
+- **Size Used**: ~25,000 images
+- **Classes**: 0 = Cat, 1 = Dog
 
 ---
 
-## 🎯 Features of the Web App
+## 🖥️ Web App Features
 
-- ✅ Upload image from your device (drag & drop / browse / paste)
+- ✅ Upload images from your device (drag, browse, or paste)
 - ✅ Paste an image URL
-- ✅ Real-time prediction (Cat 🐱 or Dog 🐶)
-- ✅ Confidence score shown via progress bar
-- ✅ Clean and responsive Streamlit UI
+- ✅ Predicts **Cat 🐱** or **Dog 🐶**
+- ✅ Shows prediction confidence as a progress bar
+- ✅ User-friendly, responsive UI
 
 ---
 
@@ -73,26 +70,22 @@ Upload, paste, or link an image and get instant predictions!
 
 - Python
 - TensorFlow / Keras
-- NumPy, Pillow
 - Streamlit
+- NumPy, Pillow, Requests
 - Hugging Face Spaces
 
 ---
 
-## 🧾 How to Run Locally
+## 🔧 Run the Web App Locally
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/your-username/cats-vs-dogs-classifier
-   cd cats-vs-dogs-classifier
-   
-2. Install dependencies:
-   ```bash
-    pip install -r requirements.txt
-   
-4. Run the app:
-   ```bash
-    streamlit run app.py
-   
-⚠️ Make sure to place best_model.keras in the same directory if you run it locally.
+### 📦 Prerequisites
+- Python 3.8+
+- Download or train a model and save it as `best_model.keras`
 
+### 🧪 Instructions
+
+```bash
+git clone https://github.com/your-username/cats-vs-dogs-classifier
+cd cats-vs-dogs-classifier
+pip install -r requirements.txt
+streamlit run app.py
